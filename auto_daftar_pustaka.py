@@ -68,4 +68,4 @@ for i, meta in enumerate(st.session_state.refs):
 
 
 
-st.caption("Powered by CrossRef API")
+st.caption("Powered by moh irvansyah")
