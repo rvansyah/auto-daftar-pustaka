@@ -3,7 +3,7 @@ import requests
 import bibtexparser
 from io import StringIO
 
-st.title("Auto Daftar Pustaka dengan Link & Unduh Sitasi")
+st.title("Auto Daftar Pustaka dengan Linki")
 
 def get_metadata_from_doi(doi):
     url = f"https://api.crossref.org/works/{doi}"
