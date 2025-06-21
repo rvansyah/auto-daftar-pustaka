@@ -66,13 +66,6 @@ for i, meta in enumerate(st.session_state.refs):
     url = meta.get('URL', '')
     st.markdown(f"{i+1}. **{title}**<br>{authors} ({year}). <i>{journal}</i>. [Link]({url})", unsafe_allow_html=True)
 
-# Unduh sitasi
-if st.session_state.refs:
-    if st.button("Unduh semua sitasi (.bib)"):
-        all_bib = "\n".join([bibtex_from_metadata(m) for m in st.session_state.refs])
-        st.download_button("Download .bib", data=all_bib, file_name="daftar_pustaka.bib")
-    if st.button("Unduh semua sitasi (.txt)"):
-        all_txt = "\n".join([f"{m.get('title',[''])[0]} - {m.get('URL','')}" for m in st.session_state.refs])
-        st.download_button("Download .txt", data=all_txt, file_name="daftar_pustaka.txt")
+
 
 st.caption("Powered by CrossRef API")
